@@ -1,33 +1,14 @@
-/* CSS Variables for consistent theming */
-:root {
-  --bg-dark: #0f172a;
-  --text-light: #f8fafc;
-  --text-muted: #94a3b8;
-  --gradient: linear-gradient(135deg, #8b5cf6, #3b82f6);
-  --glass-bg: rgba(30, 41, 59, 0.6);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --radius-md: 16px;
-  --radius-lg: 24px;
-  --transition: 0.3s ease;
-}
-
 /* Base Resets */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-html {
-  scroll-behavior: smooth; /* Smooth scroll behavior for anchor links */
-}
-
 body {
   font-family: "Inter", sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text-light);
+  background-color: #0f172a;
+  color: #f8fafc;
   line-height: 1.6;
-  overflow-x: hidden;
   position: relative;
 }
 
@@ -41,7 +22,7 @@ h4 {
 }
 
 .gradient-text {
-  background: var(--gradient);
+  background: #40405b;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -65,17 +46,15 @@ section {
   position: relative;
 }
 
-/* Glassmorphism Class */
 .glass-panel {
-  background: var(--glass-bg);
+  background: rgba(30, 41, 59, 0.6);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-/* Buttons */
 .btn {
   display: inline-block;
   padding: 0.8rem 2rem;
@@ -84,15 +63,13 @@ section {
   font-size: 1rem;
   text-decoration: none;
   color: #ffffff;
-  background: var(--gradient);
+  background: #40405b;
   border: none;
   cursor: pointer;
-  transition: var(--transition);
   box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
 }
 
 .btn:hover {
-  transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
 }
 
@@ -103,25 +80,9 @@ section {
 }
 
 .btn-outline:hover {
-  background: var(--gradient);
+  background: #40405b;
   border-color: transparent;
   box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
-}
-
-/* CSS-Only Scroll Fade-In Animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fadeInUp 1s ease-out forwards;
 }
 
 /* Hero Section */
@@ -141,7 +102,6 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   z-index: -1;
   pointer-events: none;
 }
@@ -149,7 +109,6 @@ section {
 .shape {
   position: absolute;
   border-radius: 50%;
-  filter: blur(100px);
   opacity: 0.3;
 }
 
@@ -197,13 +156,9 @@ section {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  /* transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease; */
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   border-color: rgba(255, 255, 255, 0.2);
 }
@@ -219,19 +174,7 @@ section {
   justify-content: center;
   color: #94a3b8;
   font-size: 3rem;
-  overflow: hidden;
   position: relative;
-}
-
-.project-image::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--gradient);
-  opacity: 0.1;
 }
 
 .project-content {
@@ -293,16 +236,14 @@ section {
 
 .skill-badge {
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--glass-border);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 0.6rem 1.2rem;
   border-radius: 50px;
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--text-light);
-  transition: var(--transition);
+  color: #f8fafc;
   cursor: default;
 }
-
 
 /* Contact Section */
 .contact-wrapper {
@@ -327,9 +268,9 @@ section {
   width: 100%;
   padding: 1rem 1.2rem;
   background: rgba(0, 0, 0, 0.2);
-  border: 1px solid var(--glass-border);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  color: var(--text-light);
+  color: #f8fafc;
   font-family: inherit;
   font-size: 1rem;
 }
@@ -356,7 +297,7 @@ textarea.form-control {
 footer {
   padding: 4rem 0 2rem;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
-  border-top: 1px solid var(--glass-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   text-align: center;
 }
 
@@ -372,15 +313,13 @@ footer {
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
-  transition: var(--transition);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
 }
 
 .social-link:hover {
-  color: var(--text-light);
-  transform: translateY(-3px);
+  color: #f8fafc;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
