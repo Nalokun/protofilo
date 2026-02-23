@@ -3,9 +3,7 @@
   --bg-dark: #0f172a;
   --text-light: #f8fafc;
   --text-muted: #94a3b8;
-  --accent-start: #8b5cf6;
-  --accent-end: #3b82f6;
-  --gradient: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+  --gradient: linear-gradient(135deg, #8b5cf6, #3b82f6);
   --glass-bg: rgba(30, 41, 59, 0.6);
   --glass-border: rgba(255, 255, 255, 0.08);
   --radius-md: 16px;
@@ -100,7 +98,7 @@ section {
 
 .btn-outline {
   background: transparent;
-  border: 2px solid var(--accent-start);
+  border: 2px solid #8b5cf6;
   box-shadow: none;
 }
 
@@ -156,7 +154,7 @@ section {
 }
 
 .shape-1 {
-  background: var(--accent-start);
+  background: #8b5cf6;
   width: 40vw;
   height: 40vw;
   top: -10vw;
@@ -164,7 +162,7 @@ section {
 }
 
 .shape-2 {
-  background: var(--accent-end);
+  background: #3b82f6;
   width: 30vw;
   height: 30vw;
   bottom: 10vh;
@@ -179,7 +177,7 @@ section {
 
 .hero-content p {
   font-size: 1.5rem;
-  color: var(--text-muted);
+  color: #94a3b8;
   margin-bottom: 2.5rem;
   font-weight: 300;
 }
@@ -199,9 +197,9 @@ section {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  transition:
+  /* transition:
     transform 0.4s ease,
-    box-shadow 0.4s ease;
+    box-shadow 0.4s ease; */
 }
 
 .project-card:hover {
@@ -219,7 +217,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-muted);
+  color: #94a3b8;
   font-size: 3rem;
   overflow: hidden;
   position: relative;
@@ -248,7 +246,7 @@ section {
 }
 
 .project-desc {
-  color: var(--text-muted);
+  color: #94a3b8;
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }
@@ -272,7 +270,7 @@ section {
 }
 
 .about-bio p {
-  color: var(--text-muted);
+  color: #94a3b8;
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
 }
@@ -320,7 +318,7 @@ section {
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: var(--text-muted);
+  color: #94a3b8;
   font-size: 0.95rem;
   font-weight: 500;
 }
@@ -338,7 +336,7 @@ section {
 
 .form-control:focus {
   outline: none;
-  border-color: var(--accent-start);
+  border-color: #8b5cf6;
   background: rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
 }
@@ -370,7 +368,7 @@ footer {
 }
 
 .social-link {
-  color: var(--text-muted);
+  color: #94a3b8;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
@@ -387,7 +385,7 @@ footer {
 }
 
 .copyright {
-  color: var(--text-muted);
+  color: #94a3b8;
   font-size: 0.9rem;
 }
 
